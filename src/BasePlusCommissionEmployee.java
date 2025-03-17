@@ -36,7 +36,8 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
     @Override
     public boolean equals(Object obj) {
         if (!super.equals(obj)) return false;
-        if (obj instanceof BasePlusCommissionEmployee other) {
+        if (obj instanceof BasePlusCommissionEmployee) {
+            BasePlusCommissionEmployee other = (BasePlusCommissionEmployee) obj;
             return this.baseSalary == other.baseSalary;
         }
         return false;
@@ -48,5 +49,4 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
         return baseSalary + super.earnings();
     }
 }
-
 
